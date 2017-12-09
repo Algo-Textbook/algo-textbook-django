@@ -6,12 +6,12 @@
         <h1><a href="/">Questions here!</a></h1>
     </div>
 
+
 {% for question in questions %}
-    <div>
-        <p>published: {{ question.published_date }}</p>
-        <h1><a href="">{{ question.title }}</a></h1>
+    <div class="question">
+        <h1><a href="{% url 'question_detail' pk=question.pk %}">{{ question.title }}</a></h1>
         <p>{{ question.text|linebreaksbr }}</p>
-    </div>
+    </div><hr width="70%">
 {% endfor %}
-    <p>hello&nbsp; hello</p>
+
 {% endblock %}

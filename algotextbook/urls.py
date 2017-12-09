@@ -22,4 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('learn.urls')),
     url(r'^question/$', ask.views.question_list, name='question_list'),
+    url(r'^question/(?P<pk>\d+)$', ask.views.question_detail, name='question_detail'),
+
 ]

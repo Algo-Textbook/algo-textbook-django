@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div>
+        <h1>{{ question.title }}</h1>
+        <p>{{ question.text|linebreaksbr }}</p>
+    </div>
+
+{% endblock %}
