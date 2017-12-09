@@ -21,5 +21,5 @@ import ask.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('learn.urls')),
-    url(r'^question/$', ask.views.question_list),
+    url(r'^question/$', ask.views.question_list, name='question_list'),
 ]
