@@ -2,18 +2,15 @@
 {% load staticfiles %}
 
 {% block content %}
-
     <div>
-    <h1><a href="/">Questions here!</a></h1>
-</div>
+        <h1><a href="/">Questions here!</a></h1>
+    </div>
 
 {% for question in questions %}
     <div>
-    {{ question }}
-    <!--    <p>published: {{ question.published_date }}</p>
+        <p>published: {{ question.published_date }}</p>
         <h1><a href="">{{ question.title }}</a></h1>
         <p>{{ question.text|linebreaksbr }}</p>
-        -->
     </div>
 {% endfor %}
     <p>hello&nbsp; hello</p>
