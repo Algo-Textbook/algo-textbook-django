@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h1>새 질문을 작성해주세요</h1>
+    <form method="POST" class="question-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">저장</button>
+    </form>
+{% endblock %}

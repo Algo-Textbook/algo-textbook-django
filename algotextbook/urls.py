@@ -16,12 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin\
 
-import ask.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('learn.urls')),
-    url(r'^question/$', ask.views.question_list, name='question_list'),
-    url(r'^question/(?P<pk>\d+)$', ask.views.question_detail, name='question_detail'),
+    url(r'^ask/', include('ask.urls')),
 
 ]

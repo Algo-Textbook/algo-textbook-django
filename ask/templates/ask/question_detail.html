@@ -3,6 +3,12 @@
 
 {% block content %}
     <div>
+    {% if user.is_authenticated %}
+    <a class="btn btn-default" href="{% url 'question_edit' pk=question.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    {% endif %}
+    </div>
+
+    <div>
         <h1>{{ question.title }}</h1>
         <p>{{ question.text|linebreaksbr }}</p>
     </div>
