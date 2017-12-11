@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^$', learn.views.index, name='index'),
     url(r'^learn/', include('learn.urls')),
     url(r'^ask/', include('ask.urls')),
+    url(r'^activity/', learn.views.group_activity, name='group_activity'),
 
 ]

@@ -10,3 +10,5 @@ def learn_home(request):
     return render(request, 'learn/home.html', {})
 
 
+def group_activity(request):
+    return render(request, 'learn/activity.html', {})
