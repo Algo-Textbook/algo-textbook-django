@@ -20,7 +20,7 @@ def question_new(request):
         if form.is_valid():
             question = form.save(commit=False)
             question.author = request.user
-            # question.published_date = timezone.now()
+            question.published_date = timezone.now()
             question.save()
             return redirect('question_detail', pk=question.pk)
     else:
@@ -36,7 +36,7 @@ def question_edit(request, pk):
         if form.is_valid():
             question = form.save(commit=False)
             question.author = request.user
-            # question.published_date = timezone.now()
+            question.published_date = timezone.now()
             question.save()
             return redirect('question_detail', pk=question.pk)
     else:

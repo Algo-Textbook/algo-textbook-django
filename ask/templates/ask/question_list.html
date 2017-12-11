@@ -2,19 +2,31 @@
 {% load staticfiles %}
 
 {% block content %}
+    <nav class="navbar navbar-default">
+        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <span>Toggle Sidebar</span>
+        </button>
+    </nav>
+
+
+
+
+
     <div>
-        <div> <h5>질문 있나요?</h5></div>
+        <div><h5>질문 있나요?</h5></div>
         {% if user.is_authenticated %}
-        <a href="{% url 'question_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'question_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
     </div>
 
 
-{% for question in questions %}
-    <div class="question">
-        <h1><a href="{% url 'question_detail' pk=question.pk %}">{{ question.title }}</a></h1>
-        <p>{{ question.text|linebreaksbr }}</p>
-    </div><hr width="70%">
-{% endfor %}
+    {% for question in questions %}
+        <div class="question">
+            <h1><a href="{% url 'question_detail' pk=question.pk %}">{{ question.title }}</a></h1>
+            <p>{{ question.text|linebreaksbr }}</p>
+        </div>
+        <hr width="70%">
+    {% endfor %}
 
 {% endblock %}
