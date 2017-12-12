@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django_jinja',
     'ask',
     'learn',
-    'teamproj',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <h3>알고리즘</h3>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/express_home.html">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="content-box" class="col-sm-offset-2 col-sm-8">
+        <div class="row">
+            <!-- textcontents use id="text-box" title should be <h3></h3> -->
+            <div id="text-box">
+                <h3>무엇을 배울까?</h3>
+                <p>
+                <ul>
+                    <li><h4>알고리즘의 의미와 중요성을 이해한다.</h4></li>
+                    <li><h4>알고리즘을 다양한 방법으로 표현할 수 있다.</h4></li>
+                </ul>
+                </p>
+            </div>
+            <br>
+            <br>
+
+            <div id="text-box">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">1.알고리즘 이해하기</h4>
+                    </a>
+                    <a href="{% url 'u1' %}" class="list-group-item">01 알고리즘의 정의</a>
+                    <a href="{% url 'u2' %}" class="list-group-item">02 컴퓨터와 알고리즘</a>
+                    <a href="{% url 'u3' %}" class="list-group-item">03 알고리즘의 중요성</a>
+                    <a href="{% url 'u4' %}" class="list-group-item">04 알고리즘의 요건</a>
+                    <a href="{% url 'u5' %}" class="list-group-item">05 생활 속 알고리즘</a>
+                    <a href="{% url 'u6' %}" class="list-group-item">문제 풀이</a>
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">2. 알고리즘 표현하기</h4>
+                    </a>
+                    <a href="#" class="list-group-item disabled">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item disabled">Vestibulum at eros</a>
+                </div>
+            </div>
+
+
+            <!-- in case of media contents, use id="media-box" -->
+            <div id="media-box">
+                <img src="expression_1_timetable.jpg" alt="there's no media yet" class="img-responsive">
+            </div>
+        </div>
+
+
+        <div id="text-box">
+            <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr; 이전 페이지</a></li>
+                <li class="next disabled"><a href="#">다음 페이지 &rarr;</a></li>
+            </ul>
+        </div>
+        <div>
+            <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
+            </a>
+        </div>
+
+    </div>
+
+
+{% endblock %}
