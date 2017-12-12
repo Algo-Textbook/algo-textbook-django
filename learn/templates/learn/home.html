@@ -10,18 +10,19 @@
                     <i class="glyphicon glyphicon-align-left"></i>
                     <span>Toggle Sidebar</span>
                 </button>
-                <h3>알고리즘</h3>
+                <h3>들어가기 전에</h3>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/express_home.html">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
+                    <li><a href="{% url "u1" %}">1</a></li>
+                    <li><a href="{% url "u2" %}">2</a></li>
+                    <li><a href="{% url "u3" %}">3</a></li>
+                    <li><a href="{% url "u4" %}">4</a></li>
+                    <li><a href="{% url "u5" %}">5</a></li>
+                    <li><a href="{% url "u6" %}">6</a></li>
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -31,34 +32,30 @@
         <div class="row">
             <!-- textcontents use id="text-box" title should be <h3></h3> -->
             <div id="text-box">
-
+                <h3>알고리즘?</h3><br>
+                <p>아빠가 아이들이 적어온 방법대로 샌드위치를 만들고 있네요.<br>
+                    과연 어떤 샌드위치가 탄생했을까요?</p>
             </div>
 
             <!-- in case of media contents, use id="media-box" -->
             <div id="media-box">
-                <img src="expression_1_timetable.jpg" alt="there's no media yet" class="img-responsive">
-                <img src="#" alt="there's no media yet" class="img-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GrsqZSDMKO4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
 
-    </div>
 
         <div>
-            <a href="#" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-left"></span> PREV
-            </a>
-            <a href="#" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-right"></span> NEXT
-            </a>
-            <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
-            </a>
-
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="{% url 'index' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'u1' %}">다음 페이지 :<br>들어가기 전에 &rarr;</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg" >
+                    <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
+                </a>
+            </div>
         </div>
-
     </div>
-
-
-
-
 {% endblock %}
