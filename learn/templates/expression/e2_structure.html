@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Collapsible sidebar using Bootstrap 3</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style2.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+
+<body>
+
+
+
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>알고리즘단원교재</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p>2.2 알고리즘</p>
+        <li class="active">
+          <a href="#">홈으로 돌아가기</a>
+
+        </li>
+        <li>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">1 알고리즘 이해하기</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li><a href="./understand_home.html">알고리즘의 정의</a></li>
+            <li><a href="#">알고리즘의 중요성</a></li>
+            <li><a href="#">실생활 속 알고리즘</a></li>
+            <li><a href="#">문제풀이</a></li>
+          </ul>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">2 알고리즘 표현하기</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li><a href="./e1_tools.html">알고리즘 표현방법</a></li>
+            <li><a href="./e2_structure.html">알고리즘 표현방식</a></li>
+            <li><a href="./e3_practice.html">문제풀이</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">모둠활동</a>
+        </li>
+        <li>
+          <a href="#">질문게시판</a>
+        </li>
+      </ul>
+
+      <!-- 원작자의 다운로드 버튼
+                <ul class="list-unstyled CTAs">
+                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                </ul>
+              -->
+    </nav>
+
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+          <div class="navbar-header">
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
+            <h3>알고리즘</h3>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/express_home.html">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- textbook contents write down here-->
+      <div id="content-box" class="col-sm-offset-2 col-sm-8">
+        <div class="row">
+
+          <div id="text-box">
+            <h2> 2. 어떤 구조로 알고리즘을 표현할 수 있을까? </h2>
+            <p> 지난 시간에 글과 그림, 순서도, 프로그래밍 언어로 알고리즘을 표현할 수 있음을 배웠다. 하지만 어떻게 해야 다른 사람들이 알아듣기 쉽게, 그리고 모든 문제 상황을 대처할 수 있게 알고리즘을 짤 수 있을까?</p>
+            <p> 유명 컴퓨터 과학자들은 정해진 답이 있는 문제의 경우 순차, 반복, 선택 구조만으로 해결방법을 나타낼 수 있다고 말한다. 이처럼 정해진 구조를 이용하여 생활 속 문제상황을 알고리즘적으로 해결해보자.</p>
+          </div>
+
+          <div id="text-box">
+            <h3> 1 순차 구조 </h3>
+            <p>  알고리즘이 지니고 있는 가장 기본적인 구조는 실행 순서가 처음부터 끝까지 한 방향으로 처리되는 구조이다. 행사의 순서를 나타내 주는 식순, 계획표, 요리법 등이 우리 일상 생활 속에 존재하는 순차 구조의 알고리즘이다. </p>
+          </div>
+
+          <div id="media-box">
+            <img src="C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\sequence.png" alt="there's no medai yet" class="img-responsive">
+          </div>
+
+          <div id="text-box">
+            <h3> 2 반복 구조 </h3>
+            <p>  문제를 해결하는 과정에서 조건을 만족할 때까지 일정한 부분을 반복하는 형태의 알고리즘이 표현될 때도 있다. 예를 들어, 음식을 만드는 기계는 손님이 주문한 개수만큼의 음식을 만들 때까지 계속해서 조리과정을 반복한다.  </p>
+          </div>
+
+          <div id="media-box">
+            <img src="C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\repeat.png" alt="there's no medai yet" class="img-responsive">
+          </div>
+
+          <div id="text-box">
+            <h3> 3 선택 구조 </h3>
+            <p>  주어진 조건에 따라 선택을 하는 구조 역시 알고리즘의 구조 중 하나이다.  주사위를 굴려 말을 움직이는 보드게임들도 주사위 눈의 개수에 따라 몇 칸을 움직일지 선택되는 알고리즘을 따르고 있다. </p>
+          </div>
+
+          <div id="media-box">
+            <img src="C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\select.png" alt="there's no medai yet" class="img-responsive">
+          </div>
+
+          <div id="text-box">
+            <ul class="pager">
+                    <li class="previous"><a href="./e1_tools.html">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="./e3_practice.html">다음 페이지 &rarr;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- textbook contents write up here-->
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- Bootstrap Js CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function() {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
