@@ -25,7 +25,7 @@ SECRET_KEY = '(9*%6@9tx4pprp(y@55fm()lnd!+fqsj62y!-z(j!yr*jv%n=%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', ]
+ALLOWED_HOSTS = ['localhost', 'codingbowoo.pythonanywhere.com']
 
 
 # Application definition
