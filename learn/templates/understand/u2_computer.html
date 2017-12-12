@@ -10,7 +10,7 @@
                     <i class="glyphicon glyphicon-align-left"></i>
                     <span>Toggle Sidebar</span>
                 </button>
-                <h3> 컴퓨터와 알고리즘 </h3>
+                <h3>알고리즘의 정의</h3>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -31,29 +31,41 @@
         <div class="row">
             <!-- textcontents use id="text-box" title should be <h3></h3> -->
             <div id="text-box">
+                <h3>Q2. 컴퓨터는 문제를 스스로 해결하나요?</h3><br>
+                <p>여러 가지 상황과 조건을 고려해야 하는 복잡한 문제가 발생하는 경우에는
+                    컴퓨터를 이용해 문제를 해결하기도 한다.</p>
+                <p>컴퓨터는 사람과 달리 스스로 문제를 이해하고 분석할 수 없기 때문에
+                    어떤 동작을 어떤 순서로 처리해야 하는지 단계적으로 명확하게
+                    지시해야 한다. </p>
+                <p> 그러므로 컴퓨터를 이용하여 문제를 해결하고자
+                    할 때는 논리적이고 체계적으로 정리된 <strong>알고리즘</strong>이 필요하다.</p>
+                <br><br>
 
+
+                <p>알고 있나요?</p>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <a name="프로그램"><strong>프로그램</strong></a>
+                        컴퓨터의 처리 방법을 지시하는 명령문들의 집합
+                    </div>
+                </div>
             </div>
 
-            <!-- in case of media contents, use id="media-box" -->
-            <div id="media-box">
-                <img src="expression_1_timetable.jpg" alt="there's no media yet" class="img-responsive">
-                <img src="#" alt="there's no media yet" class="img-responsive">
-            </div>
         </div>
-    </div>
 
-    <div>
-        <div id="text-box">
-            <ul class="pager">
-                <li class="previous"><a href="{% url 'u1' %}">&larr; 이전 페이지</a></li>
-                <li class="next"><a href="{% url 'u3' %}">다음 페이지 &rarr;</a></li>
-            </ul>
-        </div>
+
         <div>
-            <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
-            </a>
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="{% url 'index' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'u2' %}">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg" >
+                    <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
+                </a>
+            </div>
         </div>
     </div>
-
 {% endblock %}
