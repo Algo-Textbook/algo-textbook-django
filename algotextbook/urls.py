@@ -20,7 +20,7 @@ import learn.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', learn.views.index, name='index'),
+    url(r'^$', learn.views.learn_home, name='learn_home'),
     url(r'^learn/', include('learn.urls')),
     url(r'^ask/', include('ask.urls')),
     url(r'^activity/', learn.views.group_activity, name='group_activity'),
