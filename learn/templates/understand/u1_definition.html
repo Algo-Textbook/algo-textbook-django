@@ -31,30 +31,67 @@
         <div class="row">
             <!-- textcontents use id="text-box" title should be <h3></h3> -->
             <div id="text-box">
-
+                <h3>Q1. 알고리즘이 뭐예요?</h3><br>
+                <p>우리는 주어진 문제를 보다 효율적으로 해결하기 위해 여러 가지 해결 방법과 단계별 순서를
+                    생각해 보고, 그중 가장 적합한 방법을 선택하여 실행한다.
+                    이와 같이 어떤 문제를 해결하기 위한 절차나 방법을 <strong>알고리즘</strong>이라고 한다.</p>
+                <p>예를 들어 십진수를 <a href="#이진법">이진수</a>로 바꾸는 방법, 인터넷에서 책을 구입하는 방법,
+                    라면을 끓이는 조리법 등은 모두 알고리즘이다</p>
             </div>
 
             <!-- in case of media contents, use id="media-box" -->
             <div id="media-box">
-                <img src="expression_1_timetable.jpg" alt="there's no media yet" class="img-responsive">
-                <img src="#" alt="there's no media yet" class="img-responsive">
+                <img src="{% static 'img/decimal_binary.PNG' %}" alt="there's no media yet" class="img-responsive">
+            </div>
+
+            <div id="text-box">
+                <p> 일상에서 접하는 문제 중에는 반복적으로 일어나는 일이 많다. 이러한 문제들의 해결 방법과 과정을 미리 준비해 놓는다면,
+                    문제 상황이 생겼을 때 보다 쉽고 빠르게 해결할 수 있다.</p><br><br>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">생활 속 알고리즘의 예 - 인터넷으로 책을 구입하는 방법</h5>
+                    </div>
+                    <div class="panel-body">
+                        ① 인터넷 서점 사이트에 접속한다. <br>
+                        ② 필요한 책을 검색한다. <br>
+                        ③ 검색한 책을 주문한다. <br>
+                        ④ 주문 사항을 확인하고 결제한다.<br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="media-box">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="https://youtu.be/_dyNIRXbm-s">
+                            <img class="media-object" src="{% static 'img/youtube_icon.png' %}" height="65" width="65" alt="더 알아보기">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">참고 자료 - <a name="이진법">이진법</a></h4>
+                        EBS 클립뱅크 - Mathematica_0과1, 이진법의 세계_20110415_EP01_#001
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div>
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="{% url 'index' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'u2' %}">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg" >
+                    <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
+                </a>
             </div>
         </div>
-
     </div>
-
-    <div>
-        <div id="text-box">
-            <ul class="pager">
-                <li class="previous"><a href="{% url 'index' %}">&larr; 이전 페이지</a></li>
-                <li class="next"><a href="{% url 'u2' %}">다음 페이지 &rarr;</a></li>
-            </ul>
-        </div>
-        <div>
-            <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
-            </a>
-        </div>
-    </div>
-
 {% endblock %}
