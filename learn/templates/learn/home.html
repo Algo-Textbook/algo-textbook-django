@@ -39,20 +39,28 @@
 
             <!-- in case of media contents, use id="media-box" -->
             <div id="media-box">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GrsqZSDMKO4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GrsqZSDMKO4" frameborder="0"
+                        gesture="media" allow="encrypted-media" allowfullscreen></iframe>
             </div>
+
+            <div id="text-box">
+                <p> 내가 만드는 게 저것보단 낫겠다구요? 그렇다면 -->
+                <a href="{% url 'group_activity' %}" target="_blank"> 샌드위치 만들러 가기 </a>
+                </p>
+            </div>
+
         </div>
 
 
         <div>
             <div id="text-box">
                 <ul class="pager">
-                    <li class="previous"><a href="{% url 'index' %}">&larr; 이전 페이지</a></li>
-                    <li class="next"><a href="{% url 'u1' %}">다음 페이지 :<br>단원 목차 &rarr;</a></li>
+                    <li class="previous" disabled="true"><a href="{% url 'index' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'index' %}">다음 페이지 :<br>단원 목차 &rarr;</a></li>
                 </ul>
             </div>
             <div>
-                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg" >
+                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
                     <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
                 </a>
             </div>
