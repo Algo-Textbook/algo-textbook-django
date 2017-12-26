@@ -1,213 +1,120 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% load staticfiles %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% block content %}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
 
-  <title>Collapsible sidebar using Bootstrap 3</title>
+            <div class="navbar-header">
+                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <h3>01 알고리즘 표현 방법</h3>
+            </div>
 
-  <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="style2.css">
-  <!-- Scrollbar Custom CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-</head>
-
-<body>
-
-
-
-  <div class="wrapper">
-    <!-- Sidebar Holder -->
-    <nav id="sidebar">
-      <div class="sidebar-header">
-        <h3>알고리즘단원교재</h3>
-      </div>
-
-      <ul class="list-unstyled components">
-        <p>2.2 알고리즘</p>
-        <li class="active">
-          <a href="#">홈으로 돌아가기</a>
-
-        </li>
-        <li>
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">1 알고리즘 이해하기</a>
-          <ul class="collapse list-unstyled" id="homeSubmenu">
-            <li><a href="#">알고리즘의 정의</a></li>
-            <li><a href="#">알고리즘의 중요성</a></li>
-            <li><a href="#">실생활 속 알고리즘</a></li>
-            <li><a href="#">문제풀이</a></li>
-          </ul>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">2 알고리즘 표현하기</a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li><a href="./e1_tools.html">알고리즘 표현방법</a></li>
-            <li><a href="./e2_structure.html">알고리즘 표현방식</a></li>
-            <li><a href="./e3_practice.html">문제풀이</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">모둠활동</a>
-        </li>
-        <li>
-          <a href="#">질문게시판</a>
-        </li>
-      </ul>
-
-      <!-- 원작자의 다운로드 버튼
-                <ul class="list-unstyled CTAs">
-                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
-                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url "e1" %}">1</a></li>
+                    <li><a href="{% url "e2" %}">2</a></li>
+                    <li><a href="{% url "e3" %}">3</a></li>
                 </ul>
-              -->
+
+            </div>
+        </div>
     </nav>
 
 
-    <!-- Page Content Holder -->
-    <div id="content">
-
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-
-          <div class="navbar-header">
-            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                                <i class="glyphicon glyphicon-align-left"></i>
-                                <span>Toggle Sidebar</span>
-                            </button>
-            <h3>알고리즘</h3>
-          </div>
-
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-            </ul>
-
-          </div>
-        </div>
-      </nav>
-
-
-      <!-- textbook contents write down here-->
-      <div id="content-box" class="col-sm-offset-2 col-sm-8">
+    <div id="content-box" class="col-sm-offset-2 col-sm-8">
 
         <div class="row">
-          <div id="text-box">
-            <h2> 1. 무엇으로 알고리즘을 표현할 수 있을까? </h2>
-            <p> 지난 시간에 알고리즘이란 주어진 문제를 보다 효율적으로 해결하기 위한 절차나 방법을 가르킨다는 것을 배웠다. 그렇다면 알고리즘은 무엇을 이용해 표현할 수 있을까? </p>
-            <p> 실생활에서 문제 해결 절차나 방법을 어떻게 표현하는지 알아보고 어떤 방법이 있을지 생각해보자.</p>
-          </div>
+            <div id="text-box">
+                <h2> 1. 무엇으로 알고리즘을 표현할 수 있을까? </h2>
+                <p> 지난 시간에 알고리즘이란 주어진 문제를 보다 효율적으로 해결하기 위한 절차나 방법을 가르킨다는 것을 배웠다. 그렇다면 알고리즘은 무엇을 이용해 표현할 수 있을까? </p>
+                <p> 실생활에서 문제 해결 절차나 방법을 어떻게 표현하는지 알아보고 어떤 방법이 있을지 생각해보자.</p>
+            </div>
 
-          <div id="text-box">
-            <h3>생각해보기</h3>
-            <p>아래에 예시들은 어떻게 알고리즘을 표현하였나요? 다른 방법으로도 표현할 수 있을까요? 조원들과 이야기해봅시다. </p>
-          </div>
-          <div id="media-box">
-            <img src="C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\example1.png" alt="there's no media yet" class="img-responsive">
-          </div>
+            <div id="text-box">
+                <h3>생각해보기</h3>
+                <p>아래에 예시들은 어떻게 알고리즘을 표현하였나요? 다른 방법으로도 표현할 수 있을까요? 조원들과 이야기해봅시다. </p>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/example1.png' %}" alt="example1.png" class="img-responsive">
+            </div>
 
-          <div id="text-box">
-            <h3> 1 글로 나타내기  </h3>
-          </div>
-          <div id="media-box">
-            <img src = "C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\nativelanguage.png" alt="there's no media yet" class="img-responsive">
-          </div>
-          <div id="text-book">
-            <p>일상생활에서 사용하는 언어를 이용하여 알고리즘을 표현하는 방법이다. 별다른 지식이 없어도 쉽게 사용할 수 있어 편리하지만 일상 언어의 모호함때문에 읽는 사람에 따라 내용이 다르게 해석될 수도 있으므로 최대한 명료하게 표현해야 한다.</p>
-          </div>
+            <div id="text-box">
+                <h3> 1 글로 나타내기 </h3>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/nativelanguage.png' %}" alt="nativelanguage.png" class="img-responsive">
+            </div>
+            <div id="text-book">
+                <p>일상생활에서 사용하는 언어를 이용하여 알고리즘을 표현하는 방법이다. 별다른 지식이 없어도 쉽게 사용할 수 있어 편리하지만 일상 언어의 모호함때문에 읽는 사람에 따라 내용이 다르게
+                    해석될 수도 있으므로 최대한 명료하게 표현해야 한다.</p>
+            </div>
 
-          <div id="text-box">
-            <h3> 2 그림으로 나타내기  </h3>
-          </div>
-          <div id="media-box">
-            <img src = "C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\picture1.png" alt="there's no media yet" class="img-responsive">
-          </div>
-          <div id="text-book">
-            <p>간단한 그림을 이용하여 알고리즘을 표현할 수 있다. 상황에 따라 이미지를 통해 설명하는 것이 글로 설명하는 것보다 훨씬 효과적일 때가 있다. 대표적인 예로 종이접기 방법 알려주기,  하루 일과표 만들기 등이 있다.
-</p>
-          </div>
+            <div id="text-box">
+                <h3> 2 그림으로 나타내기 </h3>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/picture1.png' %}" alt="picture1.png" class="img-responsive">
+            </div>
+            <div id="text-book">
+                <p>간단한 그림을 이용하여 알고리즘을 표현할 수 있다. 상황에 따라 이미지를 통해 설명하는 것이 글로 설명하는 것보다 훨씬 효과적일 때가 있다. 대표적인 예로 종이접기 방법 알려주기,
+                    하루 일과표 만들기 등이 있다.
+                </p>
+            </div>
 
-          <div id="text-box">
-            <h3> 3 순서도로 나타내기  </h3>
-          </div>
-          <div id="media-box">
-            <img src = "C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\flowchart1.png" alt="there's no media yet" class="img-responsive">
-          </div>
-          <div id="text-box">
-            <p> 미리 약속된 기호를 사용하여 순서대로 일관성 있게 알고리즘을 표현하는 방법이다. 전체적인 흐름을 명확하게 이해할 수 있고 오류를 쉽게 찾을 수 있다는 장점이 있지만, 알고리즘의 규모가 큰 경우에는 오히려 복잡할 수 있다. </p>
-          </div>
+            <div id="text-box">
+                <h3> 3 순서도로 나타내기 </h3>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/flowchart1.png' %}" alt="flowchart1.png" class="img-responsive">
+            </div>
+            <div id="text-box">
+                <p> 미리 약속된 기호를 사용하여 순서대로 일관성 있게 알고리즘을 표현하는 방법이다. 전체적인 흐름을 명확하게 이해할 수 있고 오류를 쉽게 찾을 수 있다는 장점이 있지만, 알고리즘의
+                    규모가 큰 경우에는 오히려 복잡할 수 있다. </p>
+            </div>
 
-          <div id="text-box">
-            <a role="button" href="https://goo.gl/fMJ8ar"class="btn btn-outline-info btn-lg" target="_blank">더 알아보기 : 순서도 기호</a>
-          </div>
-          <div id="media-box">
-            <img src = "C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\flowchart2.png" alt="there's no media yet" class="img-responsive">
-          </div>
+            <div id="text-box">
+                <a role="button" href="https://goo.gl/fMJ8ar" class="btn btn-outline-info btn-lg" target="_blank">더 알아보기
+                    : 순서도 기호</a>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/flowchart2.png' %}" alt="flowchart2.png" class="img-responsive">
+            </div>
 
 
-          <div id="text-box">
-            <h3> 4 프로그래밍 언어로 나타내기  </h3>
-          </div>
-          <div id="media-box">
-            <img src = "C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\programming1.png" alt="there's no media yet" class="img-responsive">
-          </div>
-          <div id="text-box">
-            <p>컴퓨터 프로그래밍 언어를 사용하여 알고리즘을 표현하는 방법이다. 컴퓨터를 이용하여 바로 실행할 수 있어 편리한 반면 사용자가 복잡한 프로그래밍 문법을 이해하고 있어야 하는 단점이 있다.</p>
-            <p>프로그래밍 언어는 그 종류가 수백 가지이이며 지금도 새로운 프로그래밍 언어가 만들어지고 있다. C, java 등 사람의 언어와 비슷하게 생긴 프로그래밍 언어 뿐 아니라 엔트리, 스크래치와 같이 블록을 이용해 프로그래밍할 수 있는 블록형 프로그래밍 언어도 있다. </p>
-          </div>
-          <div id="text-box">
-              <a role="button" href="https://playentry.org"class="btn btn-outline-info btn-lg" target="_blank">더 알아보기 : 블록형 언어 엔트리</a>
-              <a role="button" href="https://code.org"class="btn btn-outline-info btn-lg" target="_blank">더 알아보기 : 게임으로 배우는 프로그래밍</a>
-          </div>
-          <div id="media-box">
-            <img src = "C:\Users\tisk8\Desktop\work\학교\컴교재개발\디지털교과서\algo-text3\images\programming2.png" alt="there's no media yet" class="img-responsive">
-          </div>
-          <div id="text-box">
-            <ul class="pager">
-                    <li class="previous disabled"><a href="#">&larr; 이전 페이지</a></li>
-                    <li class="next"><a href="./e2_structure.html">다음 페이지 &rarr;</a></li>
-            </ul>
-          </div>
+            <div id="text-box">
+                <h3> 4 프로그래밍 언어로 나타내기 </h3>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/programming1.png' %}" alt="programming1.png" class="img-responsive">
+            </div>
+            <div id="text-box">
+                <p>컴퓨터 프로그래밍 언어를 사용하여 알고리즘을 표현하는 방법이다. 컴퓨터를 이용하여 바로 실행할 수 있어 편리한 반면 사용자가 복잡한 프로그래밍 문법을 이해하고 있어야 하는 단점이
+                    있다.</p>
+                <p>프로그래밍 언어는 그 종류가 수백 가지이이며 지금도 새로운 프로그래밍 언어가 만들어지고 있다. C, java 등 사람의 언어와 비슷하게 생긴 프로그래밍 언어 뿐 아니라 엔트리,
+                    스크래치와 같이 블록을 이용해 프로그래밍할 수 있는 블록형 프로그래밍 언어도 있다. </p>
+            </div>
+            <div id="text-box">
+                <a role="button" href="https://playentry.org" class="btn btn-outline-info btn-lg" target="_blank">더 알아보기
+                    : 블록형 언어 엔트리</a>
+                <a role="button" href="https://code.org" class="btn btn-outline-info btn-lg" target="_blank">더 알아보기 :
+                    게임으로 배우는 프로그래밍</a>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/programming2.png' %}" alt="programming2.png" class="img-responsive">
+            </div>
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous disabled"><a href="{% url 'u5' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'e2' %}">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
 
         </div>
 
-      </div>
-
-
-
     </div>
-  </div>
-
-
-
-
-
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <!-- Bootstrap Js CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- jQuery Custom Scroller CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-      });
-
-      $('#sidebarCollapse').on('click', function() {
-        $('#sidebar, #content').toggleClass('active');
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-      });
-    });
-  </script>
-</body>
-
-</html>
+{% endblock %}
