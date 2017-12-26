@@ -37,3 +37,14 @@ def u5_practice(request):
 def u6_test(request):
     return render(request, 'understand/u6_test.html', {})
 
+
+def e1_tools(request):
+    return render(request, 'expression/e1_tools.html', {})
+
+
+def e2_structure(request):
+    return render(request, 'expression/e2_structure.html', {})
+
+def e3_practice(request):
+    return render(request, 'expression/e3_practice.html', {})
+

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <h3>02 알고리즘 표현 방식</h3>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url "e1" %}">1</a></li>
+                    <li><a href="{% url "e2" %}">2</a></li>
+                    <li><a href="{% url "e3" %}">3</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="content-box" class="col-sm-offset-2 col-sm-8">
+        <div class="row">
+
+            <div id="text-box">
+                <h2> 2. 어떤 구조로 알고리즘을 표현할 수 있을까? </h2>
+                <p> 지난 시간에 글과 그림, 순서도, 프로그래밍 언어로 알고리즘을 표현할 수 있음을 배웠다. 하지만 어떻게 해야 다른 사람들이 알아듣기 쉽게, 그리고 모든 문제 상황을 대처할 수 있게
+                    알고리즘을 짤 수 있을까?</p>
+                <p> 유명 컴퓨터 과학자들은 정해진 답이 있는 문제의 경우 순차, 반복, 선택 구조만으로 해결방법을 나타낼 수 있다고 말한다. 이처럼 정해진 구조를 이용하여 생활 속 문제상황을
+                    알고리즘적으로 해결해보자.</p>
+            </div>
+
+            <div id="text-box">
+                <h3> 1 순차 구조 </h3>
+                <p> 알고리즘이 지니고 있는 가장 기본적인 구조는 실행 순서가 처음부터 끝까지 한 방향으로 처리되는 구조이다. 행사의 순서를 나타내 주는 식순, 계획표, 요리법 등이 우리 일상 생활
+                    속에 존재하는 순차 구조의 알고리즘이다. </p>
+            </div>
+
+            <div id="media-box">
+                <img src="{% static 'img/sequence.png' %}" alt="sequence.png" class="img-responsive">
+            </div>
+
+            <div id="text-box">
+                <h3> 2 반복 구조 </h3>
+                <p> 문제를 해결하는 과정에서 조건을 만족할 때까지 일정한 부분을 반복하는 형태의 알고리즘이 표현될 때도 있다. 예를 들어, 음식을 만드는 기계는 손님이 주문한 개수만큼의 음식을 만들
+                    때까지 계속해서 조리과정을 반복한다. </p>
+            </div>
+
+            <div id="media-box">
+                <img src="{% static 'img/repeat.png' %}" alt="repeat.png" class="img-responsive">
+            </div>
+
+            <div id="text-box">
+                <h3> 3 선택 구조 </h3>
+                <p> 주어진 조건에 따라 선택을 하는 구조 역시 알고리즘의 구조 중 하나이다. 주사위를 굴려 말을 움직이는 보드게임들도 주사위 눈의 개수에 따라 몇 칸을 움직일지 선택되는 알고리즘을
+                    따르고 있다. </p>
+            </div>
+
+            <div id="media-box">
+                <img src="{% static 'img/select.png' %}" alt="select.png" class="img-responsive">
+            </div>
+
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="{% url 'e1' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'e3' %}">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -10,16 +10,18 @@
                     <i class="glyphicon glyphicon-align-left"></i>
                     <span>Toggle Sidebar</span>
                 </button>
-                <h3> 알고리즘의 요건 </h3>
+                <h3>04 알고리즘의 요건</h3>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/express_home.html">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
+                    <li><a href="{% url "u1" %}">1</a></li>
+                    <li><a href="{% url "u2" %}">2</a></li>
+                    <li><a href="{% url "u3" %}">3</a></li>
+                    <li><a href="{% url "u4" %}">4</a></li>
+                    <li><a href="{% url "u5" %}">5</a></li>
+                    <li><a href="{% url "u6" %}">6</a></li>
                 </ul>
 
             </div>
@@ -31,30 +33,76 @@
         <div class="row">
             <!-- textcontents use id="text-box" title should be <h3></h3> -->
             <div id="text-box">
-
+                <h3>Q4. 알고리즘이 갖추어야 할 요건은 무엇인가요? </h3><br>
+                <p> 문제에 대한 해결 과정이나 방법을 설명한다고 해서 모두 알고리즘이라고 할 수는 없다.
+                    정확하지 않거나 논리적이지 못한 방법으로는 문제를 해결할 수 없기 때문이다.
+                    알고리즘은 다음과 같은 요건을 모두 갖추어야 한다.</p>
             </div>
 
-            <!-- in case of media contents, use id="media-box" -->
-            <div id="media-box">
-                <img src="expression_1_timetable.jpg" alt="there's no media yet" class="img-responsive">
-                <img src="#" alt="there's no media yet" class="img-responsive">
+            <div>
+                <div id="text-box">
+                    <br><h5>01 입력과 출력 </h5>
+                </div>
+                <!-- in case of media contents, use id="media-box" -->
+                <div id="media-box">
+                    <img src="{% static 'img/input_output.PNG' %}" alt="input_output" class="img-responsive">
+                </div>
+                <div id="text-box">
+                    <p> 입력은 없을 수도 있지만 출력은 반드시 하나 이상이어야 한다.</p>
+                </div>
+            </div>
+
+            <div>
+                <div id="text-box">
+                    <br><h5>02 명확성</h5>
+                </div>
+                <!-- in case of media contents, use id="media-box" -->
+                <div id="media-box">
+                    <img src="{% static 'img/clearness.PNG' %}" alt="clearness" class="img-responsive">
+                </div>
+                <div id="text-box">
+                    <p> 명령의 의미가 명확해야 한다.</p>
+                </div>
+            </div>
+            <div>
+                <div id="text-box">
+                    <br><h5>03 유한성</h5>
+                </div>
+                <!-- in case of media contents, use id="media-box" -->
+                <div id="media-box">
+                    <img src="{% static 'img/finite.PNG' %}" alt="finite" class="img-responsive">
+                </div>
+                <div id="text-box">
+                    <p> 무한 반복되지 않고 언젠가는 종료되어야 한다.</p>
+                </div>
+            </div>
+            <div>
+                <div id="text-box">
+                    <br><h5>04 수행 가능성</h5>
+                </div>
+                <!-- in case of media contents, use id="media-box" -->
+                <div id="media-box">
+                    <img src="{% static 'img/availability.PNG' %}" alt="availability" class="img-responsive">
+                </div>
+                <div id="text-box">
+                    <p>모든 명령이 수행 가능해야 한다.</p>
+                </div>
             </div>
         </div>
 
-    </div>
 
-    <div>
-        <div id="text-box">
-            <ul class="pager">
-                <li class="previous"><a href="{% url 'u3' %}">&larr; 이전 페이지</a></li>
-                <li class="next"><a href="{% url 'u5' %}">다음 페이지 &rarr;</a></li>
-            </ul>
-        </div>
         <div>
-            <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
-            </a>
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="{% url 'u3' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'u5' %}">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
+                </a>
+            </div>
         </div>
     </div>
-
 {% endblock %}

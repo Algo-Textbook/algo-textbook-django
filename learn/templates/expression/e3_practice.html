@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+                <h3>03 문제풀이</h3>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url "e1" %}">1</a></li>
+                    <li><a href="{% url "e2" %}">2</a></li>
+                    <li><a href="{% url "e3" %}">3</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="content-box" class="col-sm-offset-2 col-sm-8">
+        <div class="row">
+            <!-- textconents use id="text-box" title should be <h3></h3> -->
+            <div id="text-box">
+                <h4> 문제 1 ) </h4>
+                <p> 정컴이는 한번도 라면을 끓여본 적이 없는 외국인 친구 퓨터에게 라면을 어떻게 끓이는지 설명해주려고 한다. 아래 그림을 보고 라면을 끓이는 과정을 여러가지 알고리즘 표현 방법으로
+                    나타내어 퓨터에게 설명해 보자. ( 퓨터는 한국어를 할 줄 안다고 한다. )</p>
+                <h6> * 의사코드란 ? 사람들이 쓰는 자연어로 프로그래밍 절차를 나타낸 것을 말해요. 선생님과 함께 풀어볼까요? </h6>
+            </div>
+            <div id="media-box">
+                <img src="{% static 'img/practice1.png' %}" alt= "practice1.png" class="img-responsive">
+            </div>
+            <div id="text-box">
+                <h4> 문제 2 ) </h4>
+                <p> 위 알고리즘 표현 방법 중 주어진 문제를 표현하기에 가장 적절하다고 생각하는 방법은 무엇인지 고르고, 그 이유를 얘기해 봅시다.</p>
+                <a href="govote.at" class="btn btn-lg btn-outline-info" role="button"> 문제 풀러 가기 </a>
+            </div>
+            <div id="text-box">
+                <h6>.</h6>
+                <h6>.</h6>
+                <h6>.</h6>
+                <h4> 모둠 활동 )) 업다운 숫자 맞히기 게임 </h4>
+                <p> 모둠끼리 모여 업다운 숫자 맞히기 게임을 해봅시다. 이 게임을 어떻게 어떻게 알고리즘적으로 표현할 수 있을까요? </p>
+                <a href="https://playentry.org/entry-beta/54b3194e1c83348e4b2f269c#!/" role="button"
+                   class="btn btn-outline-info btn-lg" target="_blank"> 게임하러 가기 : 업다운 숫자 맞히기 게임!</a>
+                <a href="https://drive.google.com/drive/folders/1lqRObwY5zZ2aDypcoziK9Re_u_Iq4N68?usp=sharing"
+                   role="button" class="btn btn-outline-info btn-lg" target="_blank"> 모둠 활동 하러 가기</a>
+            </div>
+
+            <div id="text-box">
+                <h6>.</h6>
+                <h6>.</h6>
+                <h6>.</h6>
+                <h3> 복습하기 </h3>
+                <p> 문제에 대한 답이 바로 생각나지 않나요? 지금까지 배운 내용을 동영상을 통해 잠깐 복습해볼까요? </p>
+            </div>
+
+            <div id="text-box">
+                <h4> 1. 무엇으로 알고리즘을 표현할 수 있을까? </h4>
+            </div>
+            <div class="youtubeWrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qa7FytH4Zbc" frameborder="0"
+                        gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div id="text-box">
+                <h3></h3>
+                <h4> 2. 어떤 구조로 알고리즘을 표현할 수 있을까? </h4>
+                <h6> * 해당 동영상 후반부에는 우리가 아직 안 배운 '스크래치' 프로그래밍 내용도 있어요! 하고 싶은 사람은 밑에 있는 '더 알아보기'를 클릭해보자. *</h6>
+                <a href="https://scratch.mit.edu/" role="button" class="btn btn-outline-info btn-lg" target="_blank">더
+                    알아보기 : 스크래치 프로그래밍</a>
+            </div>
+            <div class="youtubeWrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/D1GjtTR9Ch8" frameborder="0"
+                        gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="./e2_structure.html">&larr; 이전 페이지</a></li>
+                    <li class="next disabled"><a href="#">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

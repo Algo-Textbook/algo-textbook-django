@@ -36,7 +36,7 @@
 
             </li>
             <li>
-                <a href="#">들어가기 전에</a>
+                <a href="{% url 'learn_home' %}">들어가기 전에</a>
             </li>
             <li>
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">1 알고리즘 이해하기</a>
@@ -50,9 +50,9 @@
                 </ul>
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">2 알고리즘 표현하기</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="./express_home.html">알고리즘 표현방법</a></li>
-                    <li><a href="#">알고리즘 표현방식</a></li>
-                    <li><a href="#">문제풀이</a></li>
+                    <li><a href="{% url 'e1' %}">알고리즘 표현방법</a></li>
+                    <li><a href="{% url 'e2' %}">알고리즘 표현방식</a></li>
+                    <li><a href="{% url 'e3' %}">문제풀이</a></li>
                 </ul>
             </li>
             <li>

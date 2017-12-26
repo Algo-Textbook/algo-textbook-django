@@ -10,16 +10,18 @@
                     <i class="glyphicon glyphicon-align-left"></i>
                     <span>Toggle Sidebar</span>
                 </button>
-                <h3> 알고리즘의 중요성 </h3>
+                <h3>03 알고리즘의 중요성</h3>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/express_home.html">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
+                    <li><a href="{% url "u1" %}">1</a></li>
+                    <li><a href="{% url "u2" %}">2</a></li>
+                    <li><a href="{% url "u3" %}">3</a></li>
+                    <li><a href="{% url "u4" %}">4</a></li>
+                    <li><a href="{% url "u5" %}">5</a></li>
+                    <li><a href="{% url "u6" %}">6</a></li>
                 </ul>
 
             </div>
@@ -31,30 +33,52 @@
         <div class="row">
             <!-- textcontents use id="text-box" title should be <h3></h3> -->
             <div id="text-box">
-
+                <h3>Q3. 알고리즘은 중요한가요?</h3><br>
+                <p>하나의 문제를 해결하는 방법은 여러 가지이다.
+                    예를 들어 1에서 100까지의 합을 구하려면
+                    1부터 100까지의 숫자를 하나하나 더해도 되지만
+                    맨 앞의 숫자와 맨 뒤의 숫자 의 합을 이용해 전체의 합을 구할 수도 있다.</p>
             </div>
 
             <!-- in case of media contents, use id="media-box" -->
             <div id="media-box">
-                <img src="expression_1_timetable.jpg" alt="there's no media yet" class="img-responsive">
-                <img src="#" alt="there's no media yet" class="img-responsive">
+                <img src="{% static 'img/importance.PNG' %}" alt="importance" class="img-responsive">
+            </div>
+
+            <div id="text-box">
+                <p> 앞의 방법은 단순해 보이지만 시간이 많이 걸리고
+                    뒤의 방법은 복잡해 보이지만 암산이 가능할 정도로 쉽다.
+                    이처럼 같은 일을 하는 경우에도 어떤 알고리즘을 사용하느냐에 따라
+                    걸리는 시간과 정확도가 다르다. 따라서 주어진 문제에 대한 논리적이고
+                    정확한 알고리즘을 찾아내야 문제 해결을 효율적으로 할 수 있다. </p><br><br>
+
+                <p>알고 있나요?</p>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">1부터 100까지의 합 구하기 </h5>
+                    </div>
+                    <div class="panel-body">
+                        ① 1+2+3+…+100 = 5,050 <br>
+                        ② (1+100)+(2+99)+(3+98)+… +(50+51) = 101+101+101+…+101 = 101×50 = 5,050<br>
+
+                    </div>
+                </div>
             </div>
         </div>
 
-    </div>
 
-    <div>
-        <div id="text-box">
-            <ul class="pager">
-                <li class="previous"><a href="{% url 'u2' %}">&larr; 이전 페이지</a></li>
-                <li class="next"><a href="{% url 'u4' %}">다음 페이지 &rarr;</a></li>
-            </ul>
-        </div>
         <div>
-            <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
-            </a>
+            <div id="text-box">
+                <ul class="pager">
+                    <li class="previous"><a href="{% url 'u2' %}">&larr; 이전 페이지</a></li>
+                    <li class="next"><a href="{% url 'u4' %}">다음 페이지 &rarr;</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="{% url 'question_list' %}" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-chevron-right"></span> 질문하기
+                </a>
+            </div>
         </div>
     </div>
-
 {% endblock %}
